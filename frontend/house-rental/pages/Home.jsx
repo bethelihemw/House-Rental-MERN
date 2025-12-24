@@ -3,7 +3,10 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/footer"
 import HouseItems from "../components/HouseItems"
 import rooms from './room.jpg'
+import { useNavigate } from "react-router-dom"
+// import { Navigate } from "react-router-dom"
 export default function Home(){
+  const navigate= useNavigate()
   return (
     <> 
         <Navbar/>
@@ -18,7 +21,7 @@ export default function Home(){
               owners effortlessly.
             </p>
 
-            <button className="add-btn">
+            <button className="add-btn" onClick={()=>navigate("/addProperty")}>
               Add property to be rented
             </button>
           </div>

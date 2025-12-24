@@ -26,7 +26,7 @@ const userSignUp = async(req,res) =>{
     //give kit a token with a secret key
     let token = jwt.sign({email,id:newUser},process.env.SECRET_KEY)
     //return the tken and the new user info
-    return res.status(200).json({token,newUser})
+    return res.status(200).json({token,user: newUser})
     // return res.status(201).json({message: "User created successfully"})
 }
 

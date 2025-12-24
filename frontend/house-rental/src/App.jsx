@@ -3,6 +3,7 @@ import axios from "axios"
 import "./App.css"
 import Home from "../pages/Home"
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import AddProperty from "../pages/AddProperty"
 
 
 const getAllHouses = async() =>{
@@ -14,7 +15,9 @@ const getAllHouses = async() =>{
 }
 
 const router=createBrowserRouter([
-    {path:"/", element:<Home/>, loader:getAllHouses}
+    {path:"/", element:<Home/>, loader:getAllHouses},
+    {path:"/myProperty",element:<Home />, loader:getAllHouses},
+      {path:"/addProperty",element:<AddProperty />}
 ])
 
 export default function App(){

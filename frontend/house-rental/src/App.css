@@ -75,6 +75,7 @@ body{
 
 /* Navigation list */
 .nav-links {
+  text-decoration: none;
   display: flex;
   gap: 30px;
   list-style: none;
@@ -533,4 +534,13 @@ body{
 .form p:hover {
   text-decoration: underline;
   color: #2ecc71;
+}
+
+
+.error{
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  font-family:  monospace;
 }
